@@ -11,6 +11,9 @@ permissions:
   pull-requests: write
 jobs:
   lockfile:
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     if: github.event_name != 'schedule' || github.repository == 'Alexays/Waybar'
     steps:
